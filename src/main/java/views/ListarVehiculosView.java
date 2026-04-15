@@ -54,7 +54,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
         totalConsumoElectricosLabel = new javax.swing.JLabel();
         totalConsumoCombustibleValue = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Logística - Listar Vehículos");
         setPreferredSize(new java.awt.Dimension(640, 480));
         setSize(new java.awt.Dimension(640, 480));
@@ -158,7 +158,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
          TableModel table = vehiculosGrid.getModel();
          Map<String, Double> lista = new HashMap<>();
          for(int i=0;i< table.getRowCount();i++){
-             lista.put((String)table.getValueAt(i, 0), (Double)table.getValueAt(i, 8));
+             lista.put((String)table.getValueAt(i, 0), (Double)table.getValueAt(i, 7));
          }
          double[] consumos = Controlador.calcularConsumos(lista);
          totalConsumoElectricosValue.setText(String.format("%.2f%n kWh", consumos[0]));
