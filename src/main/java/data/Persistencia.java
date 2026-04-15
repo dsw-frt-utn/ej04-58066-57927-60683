@@ -2,6 +2,7 @@ package data;
 
 import domain.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Persistencia {
@@ -40,6 +41,10 @@ public class Persistencia {
         vehiculos.add(v4);
     }
     
+    public static List<Sucursal> getSucursales() {
+        return sucursales;
+    }
+    
     public static ArrayList<Vehiculo> getVehiculos(){
         return vehiculos;
     }
@@ -50,9 +55,13 @@ public class Persistencia {
                 .findFirst();
     }
     
+    public static void agregarVehiculo(Vehiculo v){
+        vehiculos.add(v);
+    }
+    
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+       // inicializarVehiculos();
     }
 }
