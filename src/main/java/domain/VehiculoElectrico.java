@@ -11,12 +11,12 @@ public class VehiculoElectrico extends Vehiculo {
 
     @Override
     public double calcularConsumo(double kilometros) {
-        double total = kwhBase;
+        double total = (kilometros/100) * kwhBase;
 
-        if (capacidadCarga >= 1200) {
-            total += 0.15;
+        if (capacidadCarga > 1200) {
+            total = total * 1.15;
         }
 
-        return total * kilometros;
+        return total;
     }
 }
