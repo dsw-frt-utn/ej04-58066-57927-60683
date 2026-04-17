@@ -32,7 +32,7 @@ public class Persistencia {
         marcas.add(new Marca("Mercedes", "Alemania"));
     }
     
-    private static void inicializarVehiculos(){
+    private static void inicializarVehiculos(){ //esta no va corte la comento
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
@@ -81,6 +81,10 @@ public class Persistencia {
                     return nueva;
                 });
     }
+     
+     public static void agregarVehiculo(Vehiculo vehiculo) {
+        vehiculos.add(vehiculo);
+    }
     
      public static void agregarMarca(Marca marca) {
         marcas.add(marca);
@@ -89,6 +93,6 @@ public class Persistencia {
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+        //inicializarVehiculos();
     }
 }
