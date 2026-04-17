@@ -13,6 +13,8 @@ views\VehiculoViewModel.class
 views\AgregarVehiculo$4.class
 views\ListarVehiculosView.class
 views\AgregarVehiculo$2.class
+views\ListarVehiculosView$3.class
+views\Menu$2.class
 views\AgregarVehiculo$5.class
 domain\Sucursal.class
 views\ListarVehiculosView$2.class
