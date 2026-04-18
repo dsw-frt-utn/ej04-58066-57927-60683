@@ -8,6 +8,7 @@ public class AgregarVehiculo extends javax.swing.JFrame {
     public AgregarVehiculo() {
         initComponents();
         setTitle("Ingreso de Vehiculos"); 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
   
     @SuppressWarnings("unchecked")
